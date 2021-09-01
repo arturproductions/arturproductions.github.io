@@ -1,7 +1,8 @@
 .artists-links i.fab {
     font-size: 2.5rem;
-    color: rgba(160, 160, 160,1);
+    color: rgba(240, 240, 240,1);
     margin-bottom: 5px;
+    text-rendering: geometricPrecision;
 }
 
 .artists-links i.fab.fa-soundcloud:hover {
@@ -48,12 +49,62 @@ html, body{
 
 body > div {
     min-height: 100%;
-    background-image: url('../imgs/bg.webp');
+    background-image: url('../imgs/bg-orig-1080-80.webp');
     background-position: center;
-    background-repeat: no-repeat;
+    background-position-y: -100px;
+
     background-size: cover;
+    background-attachment: fixed;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 
 h1, h2, h3, h4, h5 {
     color: rgba(240, 240, 240, 1) !important;
+}
+
+#main-navbar {
+    background-color: transparent;
+}
+
+#main-navbar ul > li > a {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+#main-navbar ul > li.uk-active > a {
+    color: rgba(240, 176, 0, 1);
+}
+
+.uk-card {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.uk-card .uk-text-meta {
+    color: rgba(240, 240, 240, 1);
+}
+
+@media only screen and (max-width: 720px) {
+    .uk-navbar-center, .uk-navbar-nav{
+        width: 100%;
+    }
+
+    #main-navbar .uk-navbar-nav{
+        flex-direction: column;
+    }
+
+    #main-navbar ul > li > a {
+        font-size: 2rem;
+        padding: 0px;
+        min-height: 40px;
+        border-bottom: 1px solid #888888;
+    }
+
+    .uk-container-small {
+        padding: 0px;
+    }
 }
