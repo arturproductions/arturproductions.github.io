@@ -47,7 +47,7 @@ html, body{
     color: rgba(240, 240, 240, 1);
 }
 
-body > div {
+#main-cont {
     min-height: 100%;
     background-image: url('../imgs/bg-orig-1080-80.webp');
     background-position: center;
@@ -60,6 +60,10 @@ body > div {
     image-rendering: -o-crisp-edges;            /* Opera */
     image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
     -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+
+#main-cont.no-webp {
+    background-image: url('../imgs/bg-orig-1080-80.jpg');
 }
 
 h1, h2, h3, h4, h5 {
@@ -88,17 +92,41 @@ h1, h2, h3, h4, h5 {
     color: rgba(240, 240, 240, 1);
 }
 
+#about-cont .uk-label,
+#homepage-cont .uk-label {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.soundcloud-small {
+    display: none;
+}
+
+#contant-cont p {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media only screen and (max-width: 720px) {
     .uk-navbar-center, .uk-navbar-nav{
         width: 100%;
+    }
+
+    .uk-container-small {
+        padding: 5px !important;
+        margin-top: 10px !important;
     }
 
     #main-navbar .uk-navbar-nav{
         flex-direction: column;
     }
 
+    .switcher-container h1 {
+        font-size: 1.4rem;
+    }
+
     #main-navbar ul > li > a {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0px;
         min-height: 40px;
         border-bottom: 1px solid #888888;
@@ -107,4 +135,13 @@ h1, h2, h3, h4, h5 {
     .uk-container-small {
         padding: 0px;
     }
+
+    .soundcloud-small {
+        display: block;
+    }
+
+    .soundcloud-large {
+        display: none;
+    }
+
 }
