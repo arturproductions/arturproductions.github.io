@@ -1,7 +1,8 @@
 .artists-links i.fab {
     font-size: 2.5rem;
-    color: rgba(160, 160, 160,1);
+    color: rgba(200, 200, 200, 1);
     margin-bottom: 5px;
+    text-rendering: geometricPrecision;
 }
 
 .artists-links i.fab.fa-soundcloud:hover {
@@ -36,6 +37,113 @@
     color: rgba(251, 61, 85, 1);
 }
 
+.bio-text-cont {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+html, body{
+    height: 100%;
+    min-height: 100%;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(240, 240, 240, 1);
+}
+
+#bg-cont {
+    min-height: 100%;
+    background-color: rgba(240, 240, 240, 1);
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+
+#bg-cont.no-webp {
+    background-image: url('../imgs/bg-orig-1080-80.jpg');
+}
+
+#main-cont {
+    padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: rgba(150, 150, 150, 1) !important;
+}
+
+#main-navbar {
+    background-color: transparent;
+}
+
+#main-navbar ul > li > a {
+    font-size: 2.5rem;
+    color: rgba(150, 150, 150, 1);
+}
+
+#main-navbar ul > li.uk-active > a {
+    color: rgba(0, 0, 0, 1);
+}
+
+.uk-card {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+.uk-card .uk-text-meta {
+    color: rgba(150, 150, 150, 1);
+}
+
+#about-cont .uk-label,
+#homepage-cont .uk-label {
+    color: rgba(150, 150, 150, 1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.soundcloud-small {
+    display: none;
+}
+
+#contant-cont p {
+    color: rgba(150, 150, 150, 1);
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+@media only screen and (max-width: 720px) {
+    .uk-navbar-center, .uk-navbar-nav{
+        width: 100%;
+    }
+
+    .uk-container-small {
+        padding: 5px !important;
+        margin-top: 10px !important;
+    }
+
+    #main-navbar .uk-navbar-nav{
+        flex-direction: column;
+    }
+
+    .switcher-container h1 {
+        font-size: 1.4rem;
+    }
+
+    #main-navbar ul > li > a {
+        font-size: 1.5rem;
+        padding: 0px;
+        min-height: 40px;
+        border-bottom: 1px solid #888888;
+    }
+
+    .uk-container-small {
+        padding: 0px;
+    }
+
+    .soundcloud-small {
+        display: block;
+    }
+
+    .soundcloud-large {
+        display: none;
+    }
+
+}
 
 /*
 .bio-text-cont {

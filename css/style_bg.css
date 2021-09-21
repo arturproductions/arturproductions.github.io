@@ -45,9 +45,10 @@ html, body{
     height: 100%;
     min-height: 100%;
     color: rgba(240, 240, 240, 1);
+    background-color: rgba(0, 0, 0, 1);
 }
 
-#main-cont {
+#bg-cont {
     min-height: 100%;
     background-image: url('../imgs/bg-orig-1080-80.webp');
     background-position: center;
@@ -62,8 +63,12 @@ html, body{
     -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
 }
 
-#main-cont.no-webp {
+#bg-cont.no-webp {
     background-image: url('../imgs/bg-orig-1080-80.jpg');
+}
+
+#main-cont {
+    padding-bottom: 20px;
 }
 
 h1, h2, h3, h4, h5 {
